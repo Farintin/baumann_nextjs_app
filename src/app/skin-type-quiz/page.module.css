@@ -1,0 +1,158 @@
+.main {
+  width: 90%;
+  max-width: 900px;
+  margin: 16px auto;
+  padding: 8px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, .39);
+  border-radius: 4px;
+}
+
+.quizNav {
+  width: 90%;
+  max-width: 900px;
+  margin: 16px auto;
+  display: flex;
+  align-items: center;
+  margin-top: 64px;
+  flex-wrap: wrap;
+}
+.quizNav .tab {
+  --color: #fff;
+  --h: 36px;
+  margin: 4px;
+  position: relative;
+  border-color: var(--color);
+  display: flex;
+  align-items: center;
+  height: var(--h);
+  border-radius: 4px 0 0 4px;
+  margin-left: 0;
+  cursor: pointer;
+}
+.quizNav .tab .label {
+  --color: rgb(0 0 0 / 6%);
+  color: rgb(0 0 0 / 75%);
+  padding-left: 27px;
+  padding-right: 18px;
+  background-color: var(--color);
+  font-size: 72%;
+  font-weight: 600;
+  line-height: 90%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  border-color: var(--color);
+  border-radius: inherit;
+}
+.quizNav .tab .label::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  left: 100%;
+  background: transparent;
+  border: calc(var(--h) / 2) solid transparent;
+  border-left-color: inherit;
+  border-right-width: 0px;
+  z-index: 2;
+}
+.quizNav .tab::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  left: 100%;
+  background: transparent;
+  border: calc(var(--h) / 2 + 4px) solid transparent;
+  border-left-color: inherit;
+  border-right-width: 0px;
+  z-index: 1;
+}
+
+.quizNav .tab.completed .label {
+  --color: rgb(116 160 200);/* rgb(25 118 210 / 60%); */
+  color: rgb(255 255 255 / 100%);
+}
+
+.quizNav .tab:last-child {
+  border-radius: 0 4px 4px 0;
+}
+.quizNav .tab:first-child .label {
+  padding: 0 18px;
+}
+.quizNav .tab:last-child .label::after {
+  content: none;
+}
+.quizNav .tab:last-child::after {
+  content: none;
+}
+/* .quizNav .tab:hover {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, .39);
+}
+.quizNav .tab:hover .label {
+  --color: rgb(255 255 255 / 60%);
+  color: rgb(25 118 210 / 60%);
+} */
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 32px;
+  background-image: url(https://brisbanecosmeticclinic.com.au/wp-content/uploads/2021/01/Single-services-head-img.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+.banner .heading {
+  font-size: 300%;
+  font-weight: 700;
+  color: #fff;
+}
+
+
+.contact {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-image: url("https://brisbanecosmeticclinic.com.au/wp-content/uploads/2021/04/CTA-section-BG-imager.jpg");
+  background-position: top center;
+  background-size: cover;
+  margin-top: 64px;
+}
+.contact > .wrapper {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact > .wrapper > * {
+  margin: 16px 0;
+}
+.contact .info {
+  font-size: 120%;
+  font-weight: 500;
+  color: #fff;
+}
+.contact .info .title {
+  font-size: 120%;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+
+
+@media (max-width: 768px) {
+  .quizNav .tab {
+    --h: 24px;
+  } 
+  .quizNav .tab .label {
+    font-size: 60%;
+    padding: 0 12px;
+  } 
+  
+  .contact .info {
+    font-size: 100%;
+  }
+}

@@ -1,0 +1,50 @@
+.root {
+  margin: 64px 0;
+}
+
+.root > * {
+  margin-bottom: 32px;
+}
+
+.root .heading .text {
+  background-color: rgb(255 0 0 / 36%);
+  color: #fff;
+  line-height: 120%;
+  padding: 8px 16px;
+  font-size: 240%;
+}
+
+.root .score .text {
+  font-size: 108%;
+  font-weight: 700;
+  color: rgb(0 0 0 / 48%);
+  line-height: 90%;
+}
+
+.root .result .text {
+  font-size: 210%;
+  font-weight: 500;
+  color: rgb(0 0 0 / 100%);
+  line-height: 108%;
+  margin-bottom: 16px;
+}
+
+.root .result .text::first-letter {
+  text-transform: capitalize;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .root {
+    margin: 32px 0;
+  }
+  .root .heading .text {
+    font-size: 180%;
+  }
+  
+  .root .result .text {
+    font-size: 150%;
+  }
+}
